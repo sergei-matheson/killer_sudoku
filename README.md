@@ -1,6 +1,6 @@
 # killer_sudoku
 
-Toy Crystal killer sudoku calculator
+Toy killer sudoku calculator in Crystal
 
 ## Installation
 
