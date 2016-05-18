@@ -1,18 +1,14 @@
 # killer_sudoku
 
-TODO: Write a description here
+Toy Crystal killer sudoku calculator
 
 ## Installation
 
 
-TODO: Write installation instructions here
-
 
 ## Usage
 
-
-
-TODO: Write usage instructions here
+killer-sudoku
 
 ## Development
 
@@ -20,7 +16,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/killer_sudoku/fork )
+1. Fork it ( https://github.com/sergei-matheson/killer_sudoku/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -28,4 +24,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Sergei Matheson - creator, maintainer
+- [sergei-matheson](https://github.com/sergei-matheson) Sergei Matheson - creator, maintainer
