@@ -1,6 +1,6 @@
 require "crake/global"
 
-entry_point =  "exe/killer-sudoku.cr"
+entry_point = "exe/killer-sudoku.cr"
 
 task "default # Default target (spec)", %w(spec)
 
@@ -23,3 +23,6 @@ task "spec # Run all specs" do
   sh "crystal spec"
 end
 
+task "format # Run format tool" do
+  sh "crystal tool format src spec"
+end
