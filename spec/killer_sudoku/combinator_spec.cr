@@ -26,4 +26,15 @@ describe KillerSudoku::Combinator do
       end
     end
   end
+  context "given a required total of 46 and 9 digits required" do
+    let(number_of_digits) { 9 }
+    let(total) { 45 }
+    describe "the resulting combinations" do
+      it "are correct" do
+        expect(result).to eq [
+          [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        ]
+      end
+    end
+  end
 end
