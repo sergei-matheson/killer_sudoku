@@ -2,6 +2,8 @@ module KillerSudoku
   class Combinator
     DIGITS = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+    private getter number_of_digits, total
+
     def initialize(number_of_digits, total)
       @number_of_digits = number_of_digits
       @total = total
@@ -25,12 +27,12 @@ module KillerSudoku
       if @number_of_digits >= DIGITS.last
         [DIGITS]
       else
-        digit_set.permutations(@number_of_digits)
+        digit_set.permutations(number_of_digits)
       end
     end
 
     private def max_digit
-      (@number_of_digits > 1) ? @total - 1 : @total
+      (number_of_digits > 1) ? total - 1 : total
     end
   end
 end
