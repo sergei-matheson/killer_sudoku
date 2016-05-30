@@ -20,6 +20,8 @@ module KillerSudoku
       usage(e.message)
     end
 
+    @combinations : Array(Array(Int32))?
+
     private def combinations
       @combinations ||= Combinator.new(
         number_of_digits, total

@@ -2,6 +2,10 @@ module KillerSudoku
   class Combinator
     DIGITS = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+    @number_of_digits : Int32
+    @total : Int32
+    @results : Array(Array(Int32))?
+    @candidates : Array(Array(Int32))?
     private getter number_of_digits, total
 
     def initialize(number_of_digits, total)
@@ -9,7 +13,7 @@ module KillerSudoku
       @total = total
     end
 
-    def call
+    def call : Array(Array(Int32))
       @results ||= candidates.select do |candidate|
         candidate.sum == @total
       end
