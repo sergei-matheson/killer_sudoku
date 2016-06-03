@@ -14,25 +14,19 @@ module KillerSudoku
     end
 
     def call : Array(Array(Int32))
-      @results ||= candidates.select do |candidate|
-        candidate.sum == @total
-      end
+      @results ||= candidates.select { |candidate| candidate.sum == @total }
     end
 
     def candidates
-      @candidates ||= permutations.map { |x| x.sort }.sort.uniq
+      @candidates ||= if @number_of_digits >= DIGITS.last
+        [DIGITS]
+      else
+        digit_set.combinations(number_of_digits)
+      end
     end
 
     private def digit_set
       DIGITS.select { |n| n <= max_digit }
-    end
-
-    private def permutations
-      if @number_of_digits >= DIGITS.last
-        [DIGITS]
-      else
-        digit_set.permutations(number_of_digits)
-      end
     end
 
     private def max_digit
